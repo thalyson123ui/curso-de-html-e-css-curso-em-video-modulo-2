@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/* Paleta de cores corrigida */
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ed; /* Corrigido */
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'android', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: '\00a0\1f517';
+}
+
+/* Header */
+header {
+    background-image: linear-gradient(to bottom, var(--cor3),var(--cor5));
+    min-width: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+
+/* Navbar */
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 7, 7, 0.363);
+}
+
+nav a {
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+
+nav a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+/* Conteúdo principal */
+main {
+    min-width: 300px;
+    max-width: 800px; /* Ajustado */
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    padding: 20px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+}
+
+main h1 {
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right,var(--cor1), transparent);
+    text-indent: 8px;
+}
+
+main  p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+main img.pequeno {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10 -10 0 -10;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: '\2714\00a0\00a0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+// ...existing code...
+
+/* Modo escuro — ativar com <html data-theme="dark"> ou <body class="dark"> */
+:root[data-theme="dark"],
+.dark {
+    --cor0: #d9efe6; /* texto claro */
+    --cor1: #2b5a63; /* links / destaques */
+    --cor2: #2fa46a; /* acentos */
+    --cor3: #186144; /* gradiente */
+    --cor4: #9fe7c9; /* destaque */
+    --cor5: #071012; /* fundo escuro */
+}
+
+/* transições suaves ao alternar tema */
+body, header, nav, main, aside, footer, a, p, h1, h2 {
+    transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+
+/* ajustes gerais do modo escuro */
+html[data-theme="dark"] body,
+body.dark {
+    background-color: var(--cor5);
+    color: var(--cor0);
+}
+
+html[data-theme="dark"] header,
+body.dark header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+}
+
+html[data-theme="dark"] nav,
+body.dark nav {
+    background-color: rgba(0,0,0,0.45);
+}
+
+html[data-theme="dark"] main,
+body.dark main {
+    background-color: #071114;
+    color: var(--cor0);
+    box-shadow: 0 0 14px rgba(0,0,0,0.6);
+}
+
+html[data-theme="dark"] aside,
+body.dark aside {
+    background-color: #123b3a;
+    color: var(--cor0);
+}
+
+html[data-theme="dark"] footer,
+body.dark footer {
+    background-color: var(--cor5);
+    color: var(--cor0);
+}
+
+html[data-theme="dark"] a,
+body.dark a {
+    color: var(--cor2);
+    background-color: transparent;
+}
+
+html[data-theme="dark"] nav a,
+body.dark nav a {
+    color: var(--cor1);
+}
+
+html[data-theme="dark"] main a {
+    color: var(--cor0);
+    background-color: rgba(47,164,106,0.12);
+}
+
+html[data-theme="dark"] main a:hover {
+    color: var(--cor2);
+}
+
+html[data-theme="dark"] main img,
+body.dark main img {
+    filter: brightness(.92) contrast(.95);
+}
+
+/* legibilidade dos parágrafos no modo escuro */
+html[data-theme="dark"] main p,
+body.dark main p {
+    color: #d9efe6;
+}
+
+/* fim do modo escuro */
