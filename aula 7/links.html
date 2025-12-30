@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Ava1219-Littlear-Html.ico" type="image/x-icon">
+    <title>links</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color:red;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        a:visited{
+            color:darkred;
+        }
+
+        a:hover{
+            color:black;
+            text-decoration:underline;
+        }
+
+        a:active{
+            color:yellow;
+        }
+
+        a::after{
+            content:'⇐';
+            text-decoration:none;
+            font-weight:normal;
+            color:darkgray;
+        }
+
+        a::before{
+            content:'⇒';
+        }
+    </style>
+</head>
+<body>
+    <h1>personalizando links</h1>
+    <ul>
+        <li><a href="https://www.tudocelular.com/">tudo celular.com</a></li>
+        <li><a href="https://www.youtube.com/channel/UC5OdVY0WvgmiqcqnXvJMBfg">canal thalyson</a></li>
+        <li><a href="https://canaltech.com.br/">canaltech</a></li>
+    </ul>
+</body>
+</html>
